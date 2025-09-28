@@ -1,0 +1,85 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+
+    /* Configuração para Centralizar o Card de Boas-Vindas na página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa a altura total da viewport */
+}
+/* Card de Boas-Vindas */
+
+.bem-vindo-card {
+    background-color: var(--cor-clara);
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra-leve);
+    padding: 40px; /* Mais preenchimento para o card */
+    text-align: center;
+    width: 90%; 
+    max-width: 500px; /* Largura máxima para desktops */
+    transition: transform 0.3s ease-in-out;
+}
+
+.bem-vindo-card:hover {
+    transform: translateY(-5px); /* Efeito sutil ao passar o mouse */
+}
+
+.bem-vindo-card h1 {
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    margin-bottom: 25px;
+    font-size: 2.2em; /* Título maior */
+    line-height: 1.2;
+}
+
+/* Lista de Opções (Menu dentro do Card) */
+.bem-vindo-card ul {
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding: 0;
+    margin-top: 30px;
+}
+
+.bem-vindo-card li {
+    margin-bottom: 18px; /* Espaçamento entre os itens da lista */
+}
+
+.bem-vindo-card a {
+    color: var(--cor-principal); 
+    text-decoration: none;
+    font-weight: 600; /* Um pouco mais encorpado */
+    font-size: 1.1em;
+    padding: 8px 0;
+    display: block; /* Ocupa a largura total para ser mais fácil de clicar */
+    transition: color 0.3s ease;
+}
+
+.bem-vindo-card a:hover {
+    color: var(--cor-acento); /* Destaque com cor de acento */
+    text-decoration: underline;
+}
+/* Responsividade */
+
+@media (max-width: 600px) {
+    .bem-vindo-card {
+        padding: 20px; /* Reduz o padding em telas menores */
+    }
+
+    .bem-vindo-card h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .bem-vindo-card li {
+        margin-bottom: 12px; /* Reduz o espaçamento entre itens em telas menores */
+    }
+}
